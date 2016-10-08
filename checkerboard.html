@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Board</title>
+</head>
+<body>
+
+	<div id="txt"></div>
+
+<script>
+	makeBoard(12);
+
+	function makeBoard(grid){
+		var text = "";
+		for (var y = 1; y <= grid; y++){
+			for (var x = 1; x <= grid; x++){
+				if ((x+y)%2 === 0){
+					text = text + "X";
+					console.log(text);
+				} else{
+					text = text + "O";
+					console.log(text);
+				}
+			}
+		text = text + "<br>";
+		}
+		document.getElementById("txt").innerHTML = text;
+
+	}
+
+</script>
+</body>
+</html>
